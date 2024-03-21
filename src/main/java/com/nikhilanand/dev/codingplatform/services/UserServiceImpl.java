@@ -108,25 +108,22 @@ public class UserServiceImpl implements UserService {
             Set<String> userBadge = user.getBadges();
 
             if (score >= 1 && score <= 30) {
-                userBadge.add("Code Ninja");
                 user.setScore(score);
+                userBadge.add("Code Ninja");
                 user.setBadges(userBadge);
                 user = userRepository.save(user);
 
-            } else if (score >= 30 && score <= 60) {
-                userBadge.add("Code Ninja");
-                userBadge.add("Code Champ");
+            } else if (score > 30 && score <= 60) {
                 user.setScore(score);
+                userBadge.add("Code Champ");
                 user.setBadges(userBadge);
                 user = userRepository.save(user);
-            } else if (score >= 60 && score <= 100) {
-                userBadge.add("Code Champ");
+            } else if (score > 60 && score <= 100) {
                 user.setScore(score);
                 userBadge.add("Code Master");
                 user.setBadges(userBadge);
                 user = userRepository.save(user);
             }
-            System.out.println(new GetUserResponse(user));
             return new GetUserResponse(user);
         } else {
             try {
