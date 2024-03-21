@@ -4,11 +4,11 @@
 **This repository contains the source code for a RESTful API designed to manage users for contests, built using the Spring Boot Framework.**
 
 ## Features
-**Retrieve all participants.
+- Retrieve all participants.
 - Register participants for contests.
 - Retrieve participant details by participant ID.
 - Update participant scores.
-- Unregister participants from contests.**
+- Unregister participants from contests.
 
 ```base
 git clone https://github.com/Nikhilananddev/coding-platform.git

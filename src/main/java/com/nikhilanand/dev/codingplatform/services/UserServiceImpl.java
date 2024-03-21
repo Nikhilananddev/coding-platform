@@ -26,7 +26,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
 
-
     @Override
     public GetUsersResponse getUsers() {
 
